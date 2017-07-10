@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ArrayList与LinkedList区别 | impnote</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ArrayList与LinkedList的区别本文讨论的内容基于随机访问的情况下 1.数据结构 2.性能 3.代码实现   数据结构JDK文档自行查看参考链接：oracle JDK_1.8_API中文谷歌版 JDK_1.8_API ArrayList 基于动态数组的数据结构（顺序表）。  LinkedList 基于链表的数据结构（双向链表）。   两者性能差异 ArrayList是基于索引的数组动">
+  <meta name="description" content="本文讨论的内容基于随机访问的情况下 1.数据结构 2.性能 3.代码实现   数据结构JDK文档自行查看参考链接：oracle JDK_1.8_API中文谷歌版 JDK_1.8_API ArrayList 基于动态数组的数据结构（顺序表）。  LinkedList 基于链表的数据结构（双向链表）。   两者性能差异1.ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArrayList与LinkedList区别">
 <meta property="og:url" content="http://yoursite.com/2017/07/11/ArrayList与LinkedList区别/index.html">
 <meta property="og:site_name" content="impnote">
-<meta property="og:description" content="ArrayList与LinkedList的区别本文讨论的内容基于随机访问的情况下 1.数据结构 2.性能 3.代码实现   数据结构JDK文档自行查看参考链接：oracle JDK_1.8_API中文谷歌版 JDK_1.8_API ArrayList 基于动态数组的数据结构（顺序表）。  LinkedList 基于链表的数据结构（双向链表）。   两者性能差异 ArrayList是基于索引的数组动">
-<meta property="og:updated_time" content="2017-07-10T18:29:46.000Z">
+<meta property="og:description" content="本文讨论的内容基于随机访问的情况下 1.数据结构 2.性能 3.代码实现   数据结构JDK文档自行查看参考链接：oracle JDK_1.8_API中文谷歌版 JDK_1.8_API ArrayList 基于动态数组的数据结构（顺序表）。  LinkedList 基于链表的数据结构（双向链表）。   两者性能差异1.ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对">
+<meta property="og:updated_time" content="2017-07-10T18:31:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArrayList与LinkedList区别">
-<meta name="twitter:description" content="ArrayList与LinkedList的区别本文讨论的内容基于随机访问的情况下 1.数据结构 2.性能 3.代码实现   数据结构JDK文档自行查看参考链接：oracle JDK_1.8_API中文谷歌版 JDK_1.8_API ArrayList 基于动态数组的数据结构（顺序表）。  LinkedList 基于链表的数据结构（双向链表）。   两者性能差异 ArrayList是基于索引的数组动">
+<meta name="twitter:description" content="本文讨论的内容基于随机访问的情况下 1.数据结构 2.性能 3.代码实现   数据结构JDK文档自行查看参考链接：oracle JDK_1.8_API中文谷歌版 JDK_1.8_API ArrayList 基于动态数组的数据结构（顺序表）。  LinkedList 基于链表的数据结构（双向链表）。   两者性能差异1.ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对">
   
     <link rel="alternative" href="/atom.xml" title="impnote" type="application/atom+xml">
   
@@ -163,7 +163,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ArrayList与LinkedList的区别"><a href="#ArrayList与LinkedList的区别" class="headerlink" title="ArrayList与LinkedList的区别"></a>ArrayList与LinkedList的区别</h1><h6 id="本文讨论的内容基于随机访问的情况下"><a href="#本文讨论的内容基于随机访问的情况下" class="headerlink" title="本文讨论的内容基于随机访问的情况下"></a><em>本文讨论的内容基于随机访问的情况下</em></h6><ul>
+        <h6 id="本文讨论的内容基于随机访问的情况下"><a href="#本文讨论的内容基于随机访问的情况下" class="headerlink" title="本文讨论的内容基于随机访问的情况下"></a><em>本文讨论的内容基于随机访问的情况下</em></h6><ul>
 <li>1.数据结构</li>
 <li>2.性能</li>
 <li>3.代码实现</li>
@@ -177,14 +177,10 @@
 <p>基于链表的数据结构（双向链表）。</p>
 </blockquote>
 <hr>
-<h2 id="两者性能差异"><a href="#两者性能差异" class="headerlink" title="两者性能差异"></a>两者性能差异</h2><ol>
-<li><p>ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对比较小，时间复杂度为O(1)；而LinkedList是双向链表，指针都回去挨个遍历，每次随机的调用get或set时间复杂度为O(n)。</p>
-</li>
-<li><p>在执行add和remove操作时，LinkedList的双向链表体现出了指针优势，每次执行add或remove操作后不需要移动数据。</p>
-</li>
-</ol>
+<h2 id="两者性能差异"><a href="#两者性能差异" class="headerlink" title="两者性能差异"></a>两者性能差异</h2><p>1.ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对比较小，时间复杂度为O(1)；而LinkedList是双向链表，指针都回去挨个遍历，每次随机的调用get或set时间复杂度为O(n)。</p>
+<p>2.在执行add和remove操作时，LinkedList的双向链表体现出了指针优势，每次执行add或remove操作后不需要移动数据。</p>
 <hr>
-<p>##代码实现<br>//留个坑</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>//留个坑</p>
 
       
 

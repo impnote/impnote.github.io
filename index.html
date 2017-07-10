@@ -161,7 +161,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ArrayList与LinkedList的区别"><a href="#ArrayList与LinkedList的区别" class="headerlink" title="ArrayList与LinkedList的区别"></a>ArrayList与LinkedList的区别</h1><h6 id="本文讨论的内容基于随机访问的情况下"><a href="#本文讨论的内容基于随机访问的情况下" class="headerlink" title="本文讨论的内容基于随机访问的情况下"></a><em>本文讨论的内容基于随机访问的情况下</em></h6><ul>
+        <h6 id="本文讨论的内容基于随机访问的情况下"><a href="#本文讨论的内容基于随机访问的情况下" class="headerlink" title="本文讨论的内容基于随机访问的情况下"></a><em>本文讨论的内容基于随机访问的情况下</em></h6><ul>
 <li>1.数据结构</li>
 <li>2.性能</li>
 <li>3.代码实现</li>
@@ -175,14 +175,10 @@
 <p>基于链表的数据结构（双向链表）。</p>
 </blockquote>
 <hr>
-<h2 id="两者性能差异"><a href="#两者性能差异" class="headerlink" title="两者性能差异"></a>两者性能差异</h2><ol>
-<li><p>ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对比较小，时间复杂度为O(1)；而LinkedList是双向链表，指针都回去挨个遍历，每次随机的调用get或set时间复杂度为O(n)。</p>
-</li>
-<li><p>在执行add和remove操作时，LinkedList的双向链表体现出了指针优势，每次执行add或remove操作后不需要移动数据。</p>
-</li>
-</ol>
+<h2 id="两者性能差异"><a href="#两者性能差异" class="headerlink" title="两者性能差异"></a>两者性能差异</h2><p>1.ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对比较小，时间复杂度为O(1)；而LinkedList是双向链表，指针都回去挨个遍历，每次随机的调用get或set时间复杂度为O(n)。</p>
+<p>2.在执行add和remove操作时，LinkedList的双向链表体现出了指针优势，每次执行add或remove操作后不需要移动数据。</p>
 <hr>
-<p>##代码实现<br>//留个坑</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>//留个坑</p>
 
       
 
