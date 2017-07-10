@@ -168,11 +168,14 @@
 </ul>
 <hr>
 <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p><em>JDK文档自行查看参考链接：</em><br><em><a href="http://docs.oracle.com/javase/8/docs/api/" target="_blank" rel="external">oracle JDK_1.8_API</a></em><br><em><a href="https://blog.fondme.cn/apidoc/jdk-1.8-google/" target="_blank" rel="external">中文谷歌版 JDK_1.8_API</a></em></p>
-<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><pre><code>基于动态数组的数据结构（顺序表）。
-</code></pre><h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><pre><code>基于链表的数据结构（双向链表）。
-</code></pre><hr>
-<p>##两者性能差异</p>
-<ol>
+<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><blockquote>
+<p>基于动态数组的数据结构（顺序表）。</p>
+</blockquote>
+<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><blockquote>
+<p>基于链表的数据结构（双向链表）。</p>
+</blockquote>
+<hr>
+<h2 id="两者性能差异"><a href="#两者性能差异" class="headerlink" title="两者性能差异"></a>两者性能差异</h2><ol>
 <li><p>ArrayList是基于索引的数组动态结构，对于随机访问的get和set开销相对比较小，时间复杂度为O(1)；而LinkedList是双向链表，指针都回去挨个遍历，每次随机的调用get或set时间复杂度为O(n)。</p>
 </li>
 <li><p>在执行add和remove操作时，LinkedList的双向链表体现出了指针优势，每次执行add或remove操作后不需要移动数据。</p>
